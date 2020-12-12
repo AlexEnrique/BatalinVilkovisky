@@ -510,13 +510,7 @@
       <article class="module">
         <h1 class="module_name">main</h1>
         <section id="module_content"><section class="section ddoc_sections">
-  <div class="ddoc_summary">
-  <p class="para">
-    This is the <code class="code">main</code> file
-
-  </p>
-</div>
-<div class="ddoc_section">
+  <div class="ddoc_section">
   <p class="para">
     <span class="ddoc_section_h">Author:</span>
 Alex Enrique Crispim, alexenriquecrispim@gmail.com
@@ -526,14 +520,21 @@ Alex Enrique Crispim, alexenriquecrispim@gmail.com
 <div class="ddoc_date">
   <h4>Date</h4>
   <p class="para">
-    November 23, 2020
+    November 25, 2020
 
   </p>
 </div>
-<div class="ddoc_license">
-  <h4>License</h4>
+<div class="ddoc_version">
+  <h4>Version</h4>
   <p class="para">
-    Use freely for any purpose
+    0.1
+
+
+  </p>
+</div><div class="ddoc_history">
+  <h4>History</h4>
+  <p class="para">
+    V0.1 - initial development version
   </p>
 </div>
 
@@ -544,7 +545,7 @@ Alex Enrique Crispim, alexenriquecrispim@gmail.com
   <li class="ddoc_member">
   <div class="ddoc_member_header">
   <div class="ddoc_header_anchor">
-  <a href="#myfunc" id="myfunc"><code class="code">myfunc</code></a>
+  <a href="#Term" id="Term"><code class="code">Term</code></a>
 </div>
 </div><div class="ddoc_decl">
   <section class="section">
@@ -553,83 +554,7 @@ Alex Enrique Crispim, alexenriquecrispim@gmail.com
       <div class="dlang">
         <p class="para">
           <code class="code">
-            <span class="ddoc_anchor" id="myfunc"></span>void <code class="code">myfunc</code>();
-
-          </code>
-        </p>
-      </div>
-    </div>
-  </section>
-</div>
-<div class="ddoc_decl">
-  <section class="section ddoc_sections">
-  <div class="ddoc_examples">
-  <h4>Examples</h4>
-  <p class="para">
-    
-<section class="code_listing">
-  <div class="code_sample">
-    <div class="dlang">
-      <ol class="code_lines">
-        <li><code class="code">writeln(<span class="string_literal">"3"</span>); <span class="comment">// writes '3' to stdout
-</span></code></li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-  </p>
-</div>
-</section>
-
-</div>
-
-</li><li class="ddoc_member">
-  <div class="ddoc_member_header">
-  <div class="ddoc_header_anchor">
-  <a href="#bar" id="bar"><code class="code">bar</code></a>
-</div>
-</div><div class="ddoc_decl">
-  <section class="section">
-    <div class="declaration">
-      <h4>Declaration</h4>
-      <div class="dlang">
-        <p class="para">
-          <code class="code">
-            <span class="ddoc_anchor" id="bar"></span>void <code class="code">bar</code>();
-
-          </code>
-        </p>
-      </div>
-    </div>
-  </section>
-</div>
-<div class="ddoc_decl">
-  <section class="section ddoc_sections">
-  <div class="ddoc_deprecated">
-  <h4>Deprecated</h4>
-  <p class="para">
-    superseded by function myfunc()
-  </p>
-</div>
-
-</section>
-
-</div>
-
-</li><li class="ddoc_member">
-  <div class="ddoc_member_header">
-  <div class="ddoc_header_anchor">
-  <a href="#readFile" id="readFile"><code class="code">readFile</code></a>
-</div>
-</div><div class="ddoc_decl">
-  <section class="section">
-    <div class="declaration">
-      <h4>Declaration</h4>
-      <div class="dlang">
-        <p class="para">
-          <code class="code">
-            <span class="ddoc_anchor" id="readFile"></span>void[] <code class="code">readFile</code>(const(char)[] <code class="code">filename</code>);
+            <span class="ddoc_anchor" id="Term"></span>struct <code class="code">Term</code>;
 
           </code>
         </p>
@@ -641,21 +566,17 @@ Alex Enrique Crispim, alexenriquecrispim@gmail.com
   <section class="section ddoc_sections">
   <div class="ddoc_summary">
   <p class="para">
-    Read the file.
+    The <code class="code">Term</code> structure is intended to store information about the derivative
+ indices (ind := string[ ] in \Gamma_{ind}), and the sign following the term
 
   </p>
 </div>
-<div class="ddoc_returns">
-  <h4>Return Value</h4>
+<div class="ddoc_section">
   <p class="para">
-    The contents of the file.
-
-  </p>
-</div>
-<div class="ddoc_see_also">
-  <h4>See Also</h4>
-  <p class="para">
-    foo, bar, <a href="http://www.digitalmars.com/d/phobos/index.html">http://www.digitalmars.com/d/phobos/index.html</a>
+    <span class="ddoc_section_h">Example:</span>
+If we have a term <code class="code">- \Gamma_{AAcc}</code> in our expressions, the <code class="code">Term</code>
+ structure associated with this term is has sign = -1 and
+ indices = ["A", "A", "c", "c"]
   </p>
 </div>
 
@@ -666,7 +587,7 @@ Alex Enrique Crispim, alexenriquecrispim@gmail.com
 </li><li class="ddoc_member">
   <div class="ddoc_member_header">
   <div class="ddoc_header_anchor">
-  <a href="#writeFile" id="writeFile"><code class="code">writeFile</code></a>
+  <a href="#derive" id="derive"><code class="code">derive</code></a>
 </div>
 </div><div class="ddoc_decl">
   <section class="section">
@@ -675,7 +596,9 @@ Alex Enrique Crispim, alexenriquecrispim@gmail.com
       <div class="dlang">
         <p class="para">
           <code class="code">
-            <span class="ddoc_anchor" id="writeFile"></span>void <code class="code">writeFile</code>(string <code class="code">filename</code>);
+            <span class="ddoc_anchor" id="derive"></span>Term <code class="code">derive</code>(Index)(Term <code class="code">term</code>, Index <code class="code">index</code>) if (isSomeChar!Index || isSomeString!Index);
+<br>
+Term <code class="code">derive</code>(Index)(Variant <code class="code">var</code>, Index <code class="code">index</code>) if (isSomeChar!Index || isSomeString!Index);
 
           </code>
         </p>
@@ -687,45 +610,8 @@ Alex Enrique Crispim, alexenriquecrispim@gmail.com
   <section class="section ddoc_sections">
   <div class="ddoc_summary">
   <p class="para">
-    Write the file.
-
-  </p>
-</div>
-<div class="ddoc_throws">
-  <h4>Throws</h4>
-  <p class="para">
-    WriteException on failure.
-  </p>
-</div>
-</section>
-
-</div>
-
-</li><li class="ddoc_member">
-  <div class="ddoc_member_header">
-  <div class="ddoc_header_anchor">
-  <a href="#foo" id="foo"><code class="code">foo</code></a>
-</div>
-</div><div class="ddoc_decl">
-  <section class="section">
-    <div class="declaration">
-      <h4>Declaration</h4>
-      <div class="dlang">
-        <p class="para">
-          <code class="code">
-            <span class="ddoc_anchor" id="foo"></span>void <code class="code">foo</code>(int <code class="code">x</code>, int <code class="code">y</code>);
-
-          </code>
-        </p>
-      </div>
-    </div>
-  </section>
-</div>
-<div class="ddoc_decl">
-  <section class="section ddoc_sections">
-  <div class="ddoc_summary">
-  <p class="para">
-    <code class="code">foo</code> does this.
+    The <code class="code">derive</code>() function differentiate a given Term with respect to the
+ <code class="code">index</code> passed.
 
   </p>
 </div>
@@ -736,14 +622,13 @@ Alex Enrique Crispim, alexenriquecrispim@gmail.com
       <tr class="ddoc_param_row">
   <td scope="ddoc_param_id">
   <code class="code">
-    <em class="term">int <code class="code">x</code></em>
+    <em class="term">Term <code class="code">term</code></em>
   </code>
 </td>
 <td>
   <div class="ddoc_param_desc">
     <p class="para">
-      is for this
-              and not for that
+      (Term) The Term structure to be derived
     </p>
   </div>
 </td>
@@ -751,13 +636,75 @@ Alex Enrique Crispim, alexenriquecrispim@gmail.com
 <tr class="ddoc_param_row">
   <td scope="ddoc_param_id">
   <code class="code">
-    <em class="term">int <code class="code">y</code></em>
+    <em class="term">Index <code class="code">index</code></em>
   </code>
 </td>
 <td>
   <div class="ddoc_param_desc">
     <p class="para">
-      is for that
+      (string|char) The field entering on the derivative
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Return:</span>
+The derived <code class="code">term</code>
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#main" id="main"><code class="code">main</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="main"></span>void <code class="code">main</code>(string[] <code class="code">args</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    The <code class="code">main</code>() function is responsible for handling the command-line arguments
+ and the interactive mode.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string[] <code class="code">args</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      (optional) command-line arguments
     </p>
   </div>
 </td>
@@ -768,249 +715,6 @@ Alex Enrique Crispim, alexenriquecrispim@gmail.com
 </div>
 
 </section>
-
-</div>
-
-</li><li class="ddoc_member">
-  <div class="ddoc_member_header">
-  <div class="ddoc_header_anchor">
-  <a href="#a" id="a"><code class="code">a</code></a>
-</div>
-</div><div class="ddoc_decl">
-  <section class="section">
-    <div class="declaration">
-      <h4>Declaration</h4>
-      <div class="dlang">
-        <p class="para">
-          <code class="code">
-            <span class="ddoc_anchor" id="a"></span>int <code class="code">a</code>;
-
-          </code>
-        </p>
-      </div>
-    </div>
-  </section>
-</div>
-<div class="ddoc_decl">
-  <section class="section ddoc_sections">
-  <div class="ddoc_summary">
-  <p class="para">
-    documentation for <code class="code">a</code>; b has no documentation
-  </p>
-</div>
-
-</section>
-
-</div>
-
-</li><li class="ddoc_member">
-  <div class="ddoc_member_header">
-  <div class="ddoc_header_anchor">
-  <a href="#c" id="c"><code class="code">c</code></a>
-</div>
-</div><div class="ddoc_decl">
-  <section class="section">
-    <div class="declaration">
-      <h4>Declaration</h4>
-      <div class="dlang">
-        <p class="para">
-          <code class="code">
-            <span class="ddoc_anchor" id="c"></span>int <code class="code">c</code>;
-<br>
-<span class="ddoc_anchor" id="d"></span>int <code class="code">d</code>;
-
-          </code>
-        </p>
-      </div>
-    </div>
-  </section>
-</div>
-<div class="ddoc_decl">
-  <section class="section ddoc_sections">
-  <div class="ddoc_summary">
-  <p class="para">
-    documentation for <code class="code">c</code> and <code class="code">d</code>
- more documentation for <code class="code">c</code> and <code class="code">d</code>
-  </p>
-</div>
-
-</section>
-
-</div>
-
-</li><li class="ddoc_member">
-  <div class="ddoc_member_header">
-  <div class="ddoc_header_anchor">
-  <a href="#e" id="e"><code class="code">e</code></a>
-</div>
-</div><div class="ddoc_decl">
-  <section class="section">
-    <div class="declaration">
-      <h4>Declaration</h4>
-      <div class="dlang">
-        <p class="para">
-          <code class="code">
-            <span class="ddoc_anchor" id="e"></span>int <code class="code">e</code>;
-<br>
-<span class="ddoc_anchor" id="f"></span>int <code class="code">f</code>;
-
-          </code>
-        </p>
-      </div>
-    </div>
-  </section>
-</div>
-<div class="ddoc_decl">
-  <section class="section ddoc_sections">
-  <div class="ddoc_summary">
-  <p class="para">
-    documentation for <code class="code">e</code> and <code class="code">f</code>
-  </p>
-</div>
-
-</section>
-
-</div>
-
-</li><li class="ddoc_member">
-  <div class="ddoc_member_header">
-  <div class="ddoc_header_anchor">
-  <a href="#g" id="g"><code class="code">g</code></a>
-</div>
-</div><div class="ddoc_decl">
-  <section class="section">
-    <div class="declaration">
-      <h4>Declaration</h4>
-      <div class="dlang">
-        <p class="para">
-          <code class="code">
-            <span class="ddoc_anchor" id="g"></span>int <code class="code">g</code>;
-
-          </code>
-        </p>
-      </div>
-    </div>
-  </section>
-</div>
-<div class="ddoc_decl">
-  <section class="section ddoc_sections">
-  <div class="ddoc_summary">
-  <p class="para">
-    documentation for <code class="code">g</code>
-
-  </p>
-</div>
-<div class="ddoc_description">
-  <h4>Discussion</h4>
-  <p class="para">
-    more documentation for <code class="code">g</code>
-  </p>
-</div>
-
-</section>
-
-</div>
-
-</li><li class="ddoc_member">
-  <div class="ddoc_member_header">
-  <div class="ddoc_header_anchor">
-  <a href="#C" id="C"><code class="code">C</code></a>
-</div>
-</div><div class="ddoc_decl">
-  <section class="section">
-    <div class="declaration">
-      <h4>Declaration</h4>
-      <div class="dlang">
-        <p class="para">
-          <code class="code">
-            <span class="ddoc_anchor" id="C"></span>class <code class="code">C</code>;
-<br>
-<span class="ddoc_anchor" id="D"></span>class <code class="code">D</code>;
-
-          </code>
-        </p>
-      </div>
-    </div>
-  </section>
-</div>
-<div class="ddoc_decl">
-  <section class="section ddoc_sections">
-  <div class="ddoc_summary">
-  <p class="para">
-    documentation for <code class="code">C</code> and <code class="code">D</code>
-  </p>
-</div>
-
-</section>
-<ul class="ddoc_members">
-  <li class="ddoc_member">
-  <div class="ddoc_member_header">
-  <div class="ddoc_header_anchor">
-  <a href="#C.x" id="C.x"><code class="code">x</code></a>
-</div>
-</div><div class="ddoc_decl">
-  <section class="section">
-    <div class="declaration">
-      <h4>Declaration</h4>
-      <div class="dlang">
-        <p class="para">
-          <code class="code">
-            <span class="ddoc_anchor" id="C.x"></span>int <code class="code">x</code>;
-
-          </code>
-        </p>
-      </div>
-    </div>
-  </section>
-</div>
-<div class="ddoc_decl">
-  <section class="section ddoc_sections">
-  <div class="ddoc_summary">
-  <p class="para">
-    documentation for C.<code class="code">x</code>
-  </p>
-</div>
-
-</section>
-
-</div>
-
-</li><li class="ddoc_member">
-  <div class="ddoc_member_header">
-  <div class="ddoc_header_anchor">
-  <a href="#C.y" id="C.y"><code class="code">y</code></a>
-</div>
-</div><div class="ddoc_decl">
-  <section class="section">
-    <div class="declaration">
-      <h4>Declaration</h4>
-      <div class="dlang">
-        <p class="para">
-          <code class="code">
-            <span class="ddoc_anchor" id="C.y"></span>int <code class="code">y</code>;
-<br>
-<span class="ddoc_anchor" id="C.z"></span>int <code class="code">z</code>;
-
-          </code>
-        </p>
-      </div>
-    </div>
-  </section>
-</div>
-<div class="ddoc_decl">
-  <section class="section ddoc_sections">
-  <div class="ddoc_summary">
-  <p class="para">
-    documentation for C.<code class="code">y</code> and C.<code class="code">z</code>
-  </p>
-</div>
-
-</section>
-
-</div>
-
-</li>
-</ul>
 
 </div>
 
