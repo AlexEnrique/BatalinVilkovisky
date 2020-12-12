@@ -1,0 +1,14 @@
+{
+	"authors": [
+		"Alex E. Crispim"
+	],
+	"copyright": "Copyright © 2020, Alex E. Crispim",
+	"dependencies": {
+		"ncurses": "~>0.0.149",
+	},
+	"description": "A type of shell script intended to use the Batalin-Vilkovisky
+	 								formalism to derive Slavnov-Taylor identities or
+									Background-quantum identities.",
+	"license": "proprietary",
+	"name": "bvsh"
+}
