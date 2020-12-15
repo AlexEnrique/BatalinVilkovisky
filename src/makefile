@@ -6,10 +6,12 @@ CFLAGS = -Wall -g -lncurses -std=c++20 $(DEPS) #-Werror
 CROSS_TOOL =
 COMPILER = $(CROSS_TOOL)g++
 
+BIN = ../bin/
+
 all: clean $(TARGETS)
 
 $(TARGETS):
-	$(COMPILER) $(CFLAGS) $@.cpp -o $@
+	$(COMPILER) $(CFLAGS) $@.cpp -o $(BIN)$@
 
 clean:
 	rm -f $(TARGETS)
